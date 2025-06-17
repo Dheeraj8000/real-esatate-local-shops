@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopkeeper Panel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shopkeeper.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome, Shopkeeper! </h2>
+    <input type="text" id="product-name" placeholder="Product Name">
+    <input type="number" id="product-mrp" placeholder="Market Price ₹">
+    <input type="number" id="product-discounted" placeholder="Your Price ₹">
+    <input type="file" id="product-image">
+    <button onclick="addProduct()">Add/Update Product</button>
+    <button onclick="location.href='home.html'">Logout</button>
+    <div id="shop-products"></div>
+  </div>
+  <script src="shopkeeper.js"></script>
+  <script src="preload-kirana-products.js"></script>
+  <script src="script.js"></script>
+  <div id="shop-products"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Bazaar - Login/Register</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function showLogin() {
+      document.getElementById("login-form").style.display = "block";
+      document.getElementById("register-form").style.display = "none";
+    }
+
+    function showRegister() {
+      document.getElementById("register-form").style.display = "block";
+      document.getElementById("login-form").style.display = "none";
+    }
+
+    function toggleShopFields() {
+      const role = document.getElementById("register-role").value;
+      const shopFields = document.getElementById("shop-fields");
+      shopFields.style.display = role === "shopkeeper" ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>🛍️ Local Bazaar</h1>
+
+    <div class="form-toggle">
+      <button onclick="showLogin()">🔐 Login</button>
+      <button onclick="showRegister()">📝 Register</button>
+    </div>
+
+    <div id="login-form">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Username" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button onclick="loginUser()">Login</button>
+      <link rel="stylesheet" href="home.html"><button onclick="location.href='home.html'">Home</button>
+    </div>
+
+    <div id="register-form" style="display:none;">
+      <h2>Register</h2>
+      <input type="text" id="register-username" placeholder="Username" required>
+      <input type="password" id="register-password" placeholder="Password" required>
+      <select id="register-role" onchange="toggleShopFields()">
+        <option value="customer">Customer</option>
+        <option value="shopkeeper">Shopkeeper</option>
+      </select>
+      <div id="shop-fields" style="display:none;">
+        <input type="text" id="shop-name" placeholder="🏪 Shop Name">
+        <input type="text" id="shop-location" placeholder="📍 Shop Location">
+        <input type="text" id="shop-contact" placeholder="📞 Shop Contact">
+      </div>
+      <input type="text" id="user-location" placeholder="📍 Your Location">
+      <button onclick="registerUser()">Register</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Local Bazaar - Home</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🛒 Local Bazaar</div>
+    <nav class="nav">
+      <a href="index.html">Login</a>
+      <a href="index.html">Register</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Fresh Deals from Your Local Shops</h1>
+    <p>Best discounts near you – Fast, Easy, Local!</p>
+    <input type="text" id="search" placeholder="🔍 Search groceries, fruits, electronics..." oninput="searchProduct()">
+  </section>
+
+  <section class="categories">
+    <h2>Top Categories</h2>
+    <div class="category-scroll">
+      <div class="category">🍎 Fruits</div>
+      <div class="category">🥦 Vegetables</div>
+      <div class="category">🍪 Snacks</div>
+      <div class="category">💊 Medicines</div>
+      <div class="category">📱 Electronics</div>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <h2 class="section-title">🔥 Best Deals Around You</h2>
+    <div id="product-list" class="product-grid">
+      <!-- Product cards will be injected by home.js -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Local Bazaar | Made with ❤️ Dheeraj ji Deoria</p>
+  </footer>
+
+  <script src="home.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      searchProduct();
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
